@@ -3,4 +3,58 @@
     padding: 130px 37px 40px 37px;
     border-radius: 39px;
     box-shadow: 80px 70px 50px 10px $shadow;
+    
+    &__controller {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+                            'header header header sidebar'
+                            'number number number sidebar'
+                            'number number number sidebar'
+                            'number number number sidebar'
+                            'footer footer footer sidebar';
+    }
+
+    &__header {
+        display: grid;
+        justify-content: space-between;
+        grid-auto-flow: column;
+        grid-area: header;
+    }
+
+    &__sidebar {
+        display: grid;
+        align-content: space-between;
+        grid-gap: 10px;
+        grid-area: sidebar;
+    }
+
+    &__numbers {
+        display: grid;
+        align-content: space-between;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-area: number;
+    }
+
+    &__numbers-footer {
+        display: grid;
+        grid-auto-flow: column;
+        grid-area: footer;
+        grid-gap: 10px;
+    }
+
+    &__btn {
+        width: 42px;
+        height: 40px;
+        border-radius: 6px;
+
+        &--medium {
+            height: 65px;
+        }
+
+        &--large {
+            width: 94px;
+        }
+    }
 }
