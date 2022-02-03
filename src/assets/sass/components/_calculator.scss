@@ -1,10 +1,31 @@
 .calculator {
     background-color: $color-secondary;
-    padding: 130px 37px 40px 37px;
+    padding: 100px 30px 36px 30px;
     border-radius: 39px;
-    box-shadow: 80px 70px 50px 10px $shadow;
+    box-shadow: 60px 30px 50px 10px $shadow;
     
+    &__display {
+        text-align: end;
+    }
+    
+    &__expression {
+        color: #818181;
+        font-size: 18px;
+
+        span {
+            color: map-get($blues, 300);
+        }
+    }
+
+    &__result {
+        font-size: 36px;
+        font-weight: 500;
+        color: $color-light;
+        margin-top: 14px;
+    }
+
     &__controller {
+        margin-top: 50px;
         display: grid;
         grid-gap: 10px;
         grid-template-areas:
@@ -13,6 +34,7 @@
                             'number number number sidebar'
                             'number number number sidebar'
                             'footer footer footer sidebar';
+                            
     }
 
     &__header {
@@ -45,9 +67,22 @@
     }
 
     &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 42px;
         height: 40px;
         border-radius: 6px;
+        font-weight: 600;
+        color: map-get($blues, 300);
+        font-size: 18px;
+        background: #303136;
+
+        transition: filter 0.4s;
+
+        &:hover {
+            filter: brightness(1.6);
+        }
 
         &--medium {
             height: 65px;
@@ -55,6 +90,26 @@
 
         &--large {
             width: 94px;
+        }
+
+        &--light {
+            background: #616161;
+            color: #A5A5A5;
+            font-weight: 400;
+        }
+
+        &--blue {
+            background: map-get($blues, 400);
+            color: #339DFF;
+        }
+
+        &--blue-light {
+            background: map-get($blues, 300);
+            color: map-get($blues, 100);
+        }
+
+        img {
+            width: 18px;
         }
     }
 }

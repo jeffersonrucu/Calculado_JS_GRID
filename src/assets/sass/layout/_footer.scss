@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6px;
+
+    &__text {
+        color: $color-secondary;
+        font-weight: 300;
+    }
+}

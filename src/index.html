@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <title>Calculator App</title>
 </head>
@@ -11,21 +14,21 @@
     <main class="container">
         <div class="calculator">
             <div class="calculator__display">
-                <p class="calculator__expression"></p>
-                <p class="calculator__result"></p>
+                <p class="calculator__expression">6000<span>/</span>2<span>+</span>3227<span>*</span>2</p>
+                <p class="calculator__result">=12,454</p>
             </div>
 
             <div class="calculator__controller">
                 <div class="calculator__header">
-                    <button class="calculator__btn"> Ac </button>
-                    <button class="calculator__btn"> <img src="./assets/img/ri_delete.svg" alt="Delete"> </button>
-                    <button class="calculator__btn"> / </button>
+                    <button class="calculator__btn calculator__btn--light"> Ac </button>
+                    <button class="calculator__btn calculator__btn--light"> <img src="./assets/img/ri_delete-back-2-line.svg" alt="delete"> </button>
+                    <button class="calculator__btn calculator__btn--blue"> / </button>
                 </div>
                 <div class="calculator__sidebar">
-                    <button class="calculator__btn"> * </button>
-                    <button class="calculator__btn"> - </button>
-                    <button class="calculator__btn calculator__btn--medium"> + </button>
-                    <button class="calculator__btn calculator__btn--medium"> = </button>
+                    <button class="calculator__btn calculator__btn--blue"> * </button>
+                    <button class="calculator__btn calculator__btn--blue"> - </button>
+                    <button class="calculator__btn calculator__btn--medium calculator__btn--blue"> + </button>
+                    <button class="calculator__btn calculator__btn--medium calculator__btn--blue-light"> = </button>
                 </div>
                 <div class="calculator__numbers">
                     <button class="calculator__btn"> 7 </button>
@@ -37,12 +40,18 @@
                     <button class="calculator__btn"> 1 </button>
                     <button class="calculator__btn"> 2 </button>
                     <button class="calculator__btn"> 3 </button>
+                </div>
+                <div class="calculator__numbers-footer">
                     <button class="calculator__btn calculator__btn--large"> 0 </button>
                     <button class="calculator__btn"> . </button>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <p class="footer__text">@jeffersonrucu</p>
+    </footer>
     <script src="./assets/js/main.min.js"></script>
 </body>
 </html>
