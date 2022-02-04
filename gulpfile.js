@@ -27,7 +27,7 @@ function buildHtmlmin() {
 }
 
 function buildJs() {
-    return gulp.src(['src/assets/js/components/*.js', 'src/assets/js/views/*.js'])
+    return gulp.src(['src/assets/js/functions/*.js', 'src/assets/js/components/*.js'])
     .pipe(babel({
         presets: ['@babel/env']
     }))
@@ -47,7 +47,7 @@ function moveFiles() {
 
 /* Development */
 function developingJs() {
-    return gulp.src(['src/assets/js/components/*.js', 'src/assets/js/views/*.js'])
+    return gulp.src(['src/assets/js/functions/*.js', 'src/assets/js/components/*.js'])
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest('dist/assets/js'));
 }
